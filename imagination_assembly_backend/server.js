@@ -227,7 +227,7 @@ app.post('/api/users/register', (req, res) =>{
 					if(table.rows.length > 0){
 						res.send({rows: table.rows[0]})
 					}
-					//entry with username not found in database, good request
+					
 					else{
 						//501 http code: request not fulfilled
 						res.status(501).send({error: 'user unable to be registered'})
